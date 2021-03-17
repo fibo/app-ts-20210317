@@ -4,14 +4,17 @@ import Movies from './components/Movies';
 
 const movies = [
   {
+    director: 'Muccino',
     title: 'uno',
-    year: 2000
+    year: 2010,
   },
   {
+    director: 'Muccino',
     title: 'due',
     year: 2010
   },
   {
+    director: 'Muccino',
     title: 'tre',
     year: 2020
   }

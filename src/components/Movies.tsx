@@ -7,11 +7,9 @@ interface MoviesProps {
 export default function Movies({ movies = [] }: MoviesProps) {
     return (
         <div>
-            {
-                movies.map((movie, i) => {
-                    <Movie key={i} {...movie} />
-                })
-            }
+          {movies.map((movie, i) => (
+               <Movie key={i} {...movie} />
+             ))}
         </div>
     )
 }
