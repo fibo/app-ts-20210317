@@ -1,8 +1,13 @@
+interface Director {
+    name: string;
+    oscar: boolean;
+}
+
 export interface MovieProps {
     title: string;
     year: number;
     description?: string;
-    director: string;
+    director?: Director;
 }
 
 export default function Movie({ director, title, year }: MovieProps) {
@@ -10,7 +15,7 @@ export default function Movie({ director, title, year }: MovieProps) {
         <div>
             <h1>{title}</h1>
             <sub>{year}</sub>
-            <p>{director}</p>
+            <p>{director?.name}</p>
         </div>
     )
 }

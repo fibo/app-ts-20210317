@@ -1,24 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
 import Movies from './components/Movies';
+import {MovieProps} from "./components/Movie";
 
 const movies = [
   {
-    director: 'Muccino',
+    director: {
+      name: 'Muccino',
+      oscar: false
+    },
     title: 'uno',
     year: 2010,
   },
   {
-    director: 'Muccino',
     title: 'due',
     year: 2010
   },
   {
-    director: 'Muccino',
+    director: {
+      name: 'Muccino',
+      oscar: true
+    },
     title: 'tre',
     year: 2020
   }
 ];
+
+function getMovies(): Promise<MovieProps[]> {
+  return new Promise((resolve, reject) => {
+    resolve(movies);
+  })
+}
 
 function App() {
   return (
