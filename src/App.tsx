@@ -1,6 +1,21 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Movies from './components/Movies';
+
+const movies = [
+  {
+    title: 'uno',
+    year: 2000
+  },
+  {
+    title: 'due',
+    year: 2010
+  },
+  {
+    title: 'tre',
+    year: 2020
+  }
+];
 
 function App() {
   return (
@@ -18,6 +33,7 @@ function App() {
         >
           Learn React
         </a>
+        <Movies movies={movies} />
       </header>
     </div>
   );
